@@ -84,3 +84,10 @@ from sklearn.preprocessing import StandardScaler
 
 ss = StandardScaler()
 boston_df_scaled = pd.DataFrame(ss.fit_transform(boston_df),columns = boston_df.columns)
+
+###############################################################################3
+# Correlation Coefficient
+####################
+boston_df.corr(method='pearson').to_csv('pearson.csv')
+boston_df_scaled.corr(method='pearson').to_csv('scaled_pearson.csv')
+
